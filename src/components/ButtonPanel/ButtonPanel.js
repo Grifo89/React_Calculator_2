@@ -3,35 +3,73 @@ import './ButtonPanel.css';
 import Button from '../Button/Button';
 
 const ButtonPanel = () => (
-  <div className="display-container">
+  <div className="panel-container">
     <div className="row">
-      <Button>AC</Button>
-      <Button>+/-</Button>
-      <Button>%</Button>
-      <Button>/</Button>
+      <Button
+        name="AC"
+      />
+      <Button
+        name="+/-"
+      />
+      <Button
+        name="%"
+      />
+      <Button
+        name="/"
+      />
     </div>
     <div className="row">
-      <Button>7</Button>
-      <Button>8</Button>
-      <Button>9</Button>
-      <Button>*</Button>
+      <Button
+        name="7"
+      />
+      <Button
+        name="8"
+      />
+      <Button
+        name="9"
+      />
+      <Button
+        name="*"
+      />
     </div>
     <div className="row">
-      <Button>4</Button>
-      <Button>5</Button>
-      <Button>6</Button>
-      <Button>-</Button>
+      <Button
+        name="4"
+      />
+      <Button
+        name="5"
+      />
+      <Button
+        name="6"
+      />
+      <Button
+        name="-"
+      />
     </div>
     <div className="row">
-      <Button>1</Button>
-      <Button>2</Button>
-      <Button>3</Button>
-      <Button>+</Button>
+      <Button
+        name="1"
+      />
+      <Button
+        name="2"
+      />
+      <Button
+        name="3"
+      />
+      <Button
+        name="+"
+      />
     </div>
     <div className="row">
-      <Button>0</Button>
-      <Button>.</Button>
-      <Button>=</Button>
+      <Button
+        name="0"
+      />
+      <Button
+        name="."
+      />
+      <Button
+        name="="
+      />
     </div>
   </div>
 );

@@ -1,0 +1,16 @@
+.panel-container {
+  width: 700px;
+  margin: 0 auto;
+  height: auto;
+}
+
+.row {
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  border-top: 3px solid #d1d1d1;
+}
+
+.row:first-child {
+  border-top: none;
+}

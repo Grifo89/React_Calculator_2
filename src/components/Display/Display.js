@@ -1,6 +1,17 @@
 import React from 'react';
-import './Display.css'
+import './Display.css';
+import PropTypes from 'prop-types';
 
-export const Display = props => (
-  <div className='display'>{props.input}</div>
-)
+const Display = ({ input }) => (
+  <div className="display">{input}</div>
+);
+
+export default Display;
+
+Display.propTypes = {
+  input: PropTypes.string,
+};
+
+Display.defaultProps = {
+  input: '0',
+};

@@ -4,10 +4,10 @@ import './Button.css';
 import PropTypes from 'prop-types';
 
 
-const Button = ({ name, color = "#f5913e", wide }) => (
+const Button = ({ name, color = "#f5913e", wide=false }) => (
   <div
     className={`button-wrapper`}
-    style={{background: color, flex: wide}}
+    style={{background: color, flex: `${wide? '2': '1' }`}}
   >
     {name}
   </div>
@@ -16,7 +16,7 @@ const Button = ({ name, color = "#f5913e", wide }) => (
 Button.propTypes = {
   name: PropTypes.string,
   color: PropTypes.string,
-  wide: PropTypes.string
+  wide: PropTypes.boolean
 }
 
 Button.defaultProps = {

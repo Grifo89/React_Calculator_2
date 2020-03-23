@@ -75,7 +75,7 @@ const ButtonPanel = () => (
     <div className="row">
       <Button
         color="#e0e0e0"
-        wide={1}
+        wide={true}
         name="0"
       />
       <Button

@@ -16,7 +16,7 @@ const Button = ({ name, color = "#f5913e", wide=false }) => (
 Button.propTypes = {
   name: PropTypes.string,
   color: PropTypes.string,
-  wide: PropTypes.boolean
+  wide: PropTypes.bool
 }
 
 Button.defaultProps = {

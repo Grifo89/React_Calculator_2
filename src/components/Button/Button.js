@@ -3,6 +3,7 @@ import React from 'react';
 import './Button.css';
 import PropTypes from 'prop-types';
 
+
 const Button = ({ name, color = "#f5913e", wide }) => (
   <div
     className={`button-wrapper`}
@@ -21,5 +22,9 @@ Button.propTypes = {
 Button.defaultProps = {
   children: PropTypes.string,
 };
+
+}
+
+
 
 export default Button;

@@ -23,8 +23,6 @@ Button.defaultProps = {
   children: PropTypes.string,
 };
 
-}
-
 
 
 export default Button;

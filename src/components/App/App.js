@@ -1,16 +1,16 @@
 import React from 'react';
 import ButtonPanel from '../ButtonPanel/ButtonPanel';
 import Display from '../Display/Display';
-import calculate from '../../logic/calculate'
+// import calculate from '../../logic/calculate';
 import './App.css';
 
-calculate
+// calculate;
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      input: '0'
+      input: '0',
     };
   }
 

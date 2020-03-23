@@ -3,18 +3,12 @@ import operate from './operate';
 const calculate = (dataObj, button) => {
   let { total, next, operation } = dataObj;
   const operations = ['*', '-', '/', '+'];
-  if (operations.includes(button)) {
-    operation = button;
-  } else if (operation) {
-    total += button;
-  } else {
-    next += button;
-  }
+
   switch (button) {
     case '%':
       next = 0.01 * total;
       break;
-    case 'A/C':
+    case 'AC':
       total = null;
       next = null;
       operation = null;
@@ -33,11 +27,21 @@ const calculate = (dataObj, button) => {
     default:
   }
 
+  if (operations.includes(button)) {
+    operation = button;
+  } else if (operation) {
+    total = total ? total + button : button
+  } else if(Array.from(Array(10).keys()).toString().split(',')
+    .concat(['.']).includes(button) || operations.includes(button)){
+    next = next ? next + button :  button
+  }
+
   return {
     total,
     next,
     operation,
   };
+
 };
 
 export default calculate;

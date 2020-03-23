@@ -1,1 +1,14 @@
 
+.display{
+  width: 700px;
+  height: 70px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 auto;
+  background: #858694;
+  color: white;
+  font-size: 40px;
+  font-weight: bolder;
+  padding-top: 30px
+}
+

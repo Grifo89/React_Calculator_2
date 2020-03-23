@@ -1,7 +1,10 @@
 import React from 'react';
 import ButtonPanel from '../ButtonPanel/ButtonPanel';
 import Display from '../Display/Display';
+// import calculate from '../../logic/calculate';
 import './App.css';
+
+// calculate;
 
 class App extends React.Component {
   constructor(props) {

@@ -3,7 +3,7 @@ import './Display.css';
 import PropTypes from 'prop-types';
 
 const Display = ({ total, next, operation }) => (
-  <div className="display">{next}</div>
+  <div className="display">{total !== '0'? total : operation !== null?  next + operation : next}</div>
 );
 
 export default Display;
@@ -16,6 +16,6 @@ Display.propTypes = {
 
 Display.defaultProps = {
   total: '0',
-  next: null,
+  next: '0',
   operation: null
 };

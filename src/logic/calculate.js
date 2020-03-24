@@ -12,7 +12,6 @@ const calculate = (dataObj, button) => {
         operation = null;
       } else {
         total = (0.01 * next).toString();
-        operation = '%';
       }
       break;
     case 'AC':
@@ -40,6 +39,9 @@ const calculate = (dataObj, button) => {
     total = total ? total + button : button;
   } else if (numbers.includes(button) || operations.includes(button)) {
     next = next ? next + button : button;
+  } else if (total !== '0' && total !== null) {
+    next = total;
+    total = null;
   }
 
   return {

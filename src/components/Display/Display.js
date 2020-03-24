@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Display = ({ total, next, operation }) => {
   let number = '';
 
-  if (total !== '0') {
+  if (total !== '0' && total !== null) {
     number = total;
   } else if (operation !== null) {
     number = next + operation;

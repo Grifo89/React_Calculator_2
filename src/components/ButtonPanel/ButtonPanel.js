@@ -1,5 +1,6 @@
 import React from 'react';
 import './ButtonPanel.css';
+import PropTypes from 'prop-types';
 import Button from '../Button/Button';
 
 const ButtonPanel = ({ handleClick }) => (
@@ -8,84 +9,84 @@ const ButtonPanel = ({ handleClick }) => (
       <Button
         color="#e0e0e0"
         name="AC"
-        handleClick={ handleClick }
+        handleClick={handleClick}
       />
       <Button
         color="#e0e0e0"
         name="+/-"
-        handleClick={ handleClick }
+        handleClick={handleClick}
       />
       <Button
         color="#e0e0e0"
         name="%"
-        handleClick={ handleClick }
+        handleClick={handleClick}
       />
       <Button
         name="/"
-        handleClick={ handleClick }
+        handleClick={handleClick}
       />
     </div>
     <div className="row">
       <Button
         color="#e0e0e0"
         name="7"
-        handleClick={ handleClick }
+        handleClick={handleClick}
       />
       <Button
         color="#e0e0e0"
         name="8"
-        handleClick={ handleClick }
+        handleClick={handleClick}
       />
       <Button
         color="#e0e0e0"
         name="9"
-        handleClick={ handleClick }
+        handleClick={handleClick}
       />
       <Button
         name="*"
-        handleClick={ handleClick }
+        handleClick={handleClick}
       />
     </div>
     <div className="row">
       <Button
         color="#e0e0e0"
         name="4"
-        handleClick={ handleClick }
+        handleClick={handleClick}
       />
       <Button
         color="#e0e0e0"
         name="5"
-        handleClick={ handleClick }
+        handleClick={handleClick}
       />
       <Button
         color="#e0e0e0"
         name="6"
-        handleClick={ handleClick }
+        handleClick={handleClick}
       />
       <Button
         name="-"
-        handleClick={ handleClick }
+        handleClick={handleClick}
       />
     </div>
     <div className="row">
       <Button
         color="#e0e0e0"
         name="1"
-        handleClick={ handleClick }
+        handleClick={handleClick}
       />
       <Button
         color="#e0e0e0"
         name="2"
-        handleClick={ handleClick }
+        handleClick={handleClick}
       />
       <Button
         color="#e0e0e0"
         name="3"
-        handleClick={ handleClick }
+        handleClick={handleClick}
       />
       <Button
         name="+"
-        handleClick={ handleClick }
+        handleClick={handleClick}
       />
     </div>
     <div className="row">
@@ -93,19 +94,23 @@ const ButtonPanel = ({ handleClick }) => (
         color="#e0e0e0"
         wide
         name="0"
-        handleClick={ handleClick }
+        handleClick={handleClick}
       />
       <Button
         color="#e0e0e0"
         name="."
-        handleClick={ handleClick }
+        handleClick={handleClick}
       />
       <Button
         name="="
-        handleClick={ handleClick }
+        handleClick={handleClick}
       />
     </div>
   </div>
 );
+
+ButtonPanel.propTypes = {
+  handleClick: PropTypes.func.isRequired,
+};
 
 export default ButtonPanel;

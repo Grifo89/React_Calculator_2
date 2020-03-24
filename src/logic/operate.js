@@ -10,8 +10,8 @@ const operate = (numberOne, numberTwo, operation) => {
     case '+':
       return fb.plus(sb).toString();
     case '/':
-      if (Number(sb) === 0 ) {return '0'}
-      else {return fb.div(sb).toString()}
+      if (Number(sb) === 0) { return '0'; }
+      return fb.div(sb).toString();
     default:
       return '0';
   }

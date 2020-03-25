@@ -3,34 +3,45 @@ import operate from './operate';
 const calculate = (dataObj, button) => {
   let { total, next, operation } = dataObj;
   const operations = ['*', '-', '/', '+'];
-  if (operations.includes(button)) {
-    operation = button;
-  } else if (operation) {
-    total += button;
-  } else {
-    next += button;
-  }
+  const numbers = Array.from(Array(10).keys()).toString().split(',').concat(['.']);
+
   switch (button) {
     case '%':
-      next = 0.01 * total;
+      if (total === null && next === null) {
+        total = null;
+        operation = null;
+      } else {
+        total = (0.01 * next).toString();
+      }
       break;
-    case 'A/C':
+    case 'AC':
       total = null;
       next = null;
       operation = null;
       break;
     case '+/-':
-      total *= (-1);
-      next *= (-1);
+      total = (total * (-1)).toString();
+      next = (next * (-1)).toString();
       break;
     case '=':
       if (total !== null && next !== null) {
-        total = operate(total, next, operation);
+        total = operate(next, total, operation);
         next = null;
         operation = null;
       }
       break;
     default:
+  }
+
+  if (operations.includes(button)) {
+    operation = button;
+  } else if (operations.includes(operation)) {
+    total = total ? total + button : button;
+  } else if (numbers.includes(button) || operations.includes(button)) {
+    next = next ? next + button : button;
+  } else if (total !== '0' && total !== null) {
+    next = total;
+    total = null;
   }
 
   return {
